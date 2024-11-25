@@ -72,7 +72,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .form-container input, .form-container select {
+        .form-container input[type="text"], .form-container select {
             width: calc(100% - 20px);
             padding: 10px;
             margin: 10px 0;
@@ -86,10 +86,42 @@
             margin: 10px 0 5px;
         }
 
+        .form-container .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .form-container .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .form-container .remote-only {
             display: flex;
             align-items: center;
             gap: 10px;
+            margin: 10px 0;
+        }
+
+        .form-container .remote-only {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center horizontally */
+            gap: 10px;
+            margin: 20px 0; /* Add vertical spacing */
+        }
+
+        .form-container .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Keep items aligned to the left */
+            gap: 10px;
+            margin: 10px 0;
+            padding-left: 20px; /* Add indentation for checkboxes */
         }
 
         .form-container button {
@@ -135,12 +167,21 @@
                     <option value="">USA</option>
                 </select>
 
-                <label for="sites">Sites</label>
-                <select id="sites" name="sites">
-                    <option value="">Google</option>
-                    <option value="">Glassdoor</option>
-                    <option value="">Glassdoor</option>
-                </select>
+                <label>Sites</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="sites" value="google">
+                        Google
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sites" value="glassdoor">
+                        Glassdoor
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sites" value="ziprecruiter">
+                        ZipRecruiter
+                    </label>
+                </div>
 
                 <label for="file-type">File Type</label>
                 <select id="file-type" name="file-type">
@@ -149,8 +190,8 @@
                 </select>
 
                 <div class="remote-only">
-                    <label for="remote-only">Remote only</label>
                     <input type="checkbox" id="remote-only" name="remote-only">
+                    <label for="remote-only">Remote only</label>
                 </div>
 
                 <button type="submit">SEARCH</button>
