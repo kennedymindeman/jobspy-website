@@ -155,39 +155,38 @@
 </head>
 <body>
     <div class="container">
-        <!-- <h1>JobSpy</h1> -->
-        <img src="logo.fw_.webp" alt="MVQS Logo">
+        <img src="{{ url_for('static', filename='logo.fw_.webp') }}" alt="MVQS Logo">
         <div class="form-container">
-            <form action="#">
+            <form action="/search" method="POST">
                 <label for="job">Search Jobs</label>
                 <input type="text" id="job" name="job" placeholder="Search Jobs">
 
                 <label for="location">Location</label>
-                <select id="location" name="location">
-                    <option value="">USA</option>
-                </select>
+                <input type="text" id="location" name="location" placeholder="San Francisco, CA">
 
                 <label>Sites</label>
                 <div class="checkbox-group">
                     <label>
-                        <input type="checkbox" name="sites" value="google">
-                        Google
+                        <input type="checkbox" name="sites" value="indeed">
+                        Indeed
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sites" value="linkedin">
+                        LinkedIn
+                    </label>
+                    <label>
+                        <input type="checkbox" name="sites" value="zip_recruiter">
+                        ZipRecruiter
                     </label>
                     <label>
                         <input type="checkbox" name="sites" value="glassdoor">
                         Glassdoor
                     </label>
                     <label>
-                        <input type="checkbox" name="sites" value="ziprecruiter">
-                        ZipRecruiter
+                        <input type="checkbox" name="sites" value="google">
+                        Google
                     </label>
                 </div>
-
-                <label for="file-type">File Type</label>
-                <select id="file-type" name="file-type">
-                    <option value="">CSV</option>
-                    <option value="">Excel</option>
-                </select>
 
                 <div class="remote-only">
                     <input type="checkbox" id="remote-only" name="remote-only">
