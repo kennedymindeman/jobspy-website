@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVQS Job Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input, .form-container select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        .form-container .remote-only {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 5px;
+        }
+
+        footer .socials a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>JobSpy</h1> -->
+        <img src="logo.fw_.webp" alt="MVQS Logo">
+        <div class="form-container">
+            <form action="#">
+                <label for="job">Search Jobs</label>
+                <input type="text" id="job" name="job" placeholder="Search Jobs">
+
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <option value="">USA</option>
+                </select>
+
+                <label for="sites">Sites</label>
+                <select id="sites" name="sites">
+                    <option value="">Google</option>
+                    <option value="">Glassdoor</option>
+                    <option value="">Glassdoor</option>
+                </select>
+
+                <label for="file-type">File Type</label>
+                <select id="file-type" name="file-type">
+                    <option value="">CSV</option>
+                    <option value="">Excel</option>
+                </select>
+
+                <div class="remote-only">
+                    <label for="remote-only">Remote only</label>
+                    <input type="checkbox" id="remote-only" name="remote-only">
+                </div>
+
+                <button type="submit">SEARCH</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
