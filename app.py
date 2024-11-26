@@ -1,5 +1,5 @@
 import csv
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, send_file, render_template
 from jobspy import scrape_jobs
 
 app = Flask(__name__)
@@ -31,11 +31,16 @@ def search():
         country_indeed="USA",  # Example, adjust for your needs
     )
 
-    # Save results to CSV
-    jobs.to_csv("jobs.csv", quoting=csv.QUOTE_NONNUMERIC, escapechar="\\", index=False)
+    # Save jobs to a CSV file
+    output_file = "jobs.csv"
+    jobs.to_csv(output_file, quoting=csv.QUOTE_NONNUMERIC, escapechar="\\", index=False)
 
-    return jsonify(
-        {"message": f"Found {len(jobs)} jobs", "jobs": jobs.head().to_dict()}
+    # Return the CSV file for download
+    return send_file(
+        output_file,
+        as_attachment=True,
+        download_name="jobs.csv",
+        mimetype="text/csv"
     )
 
 
