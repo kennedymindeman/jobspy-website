@@ -1,8 +1,8 @@
 # Installation
 ## Prerequisites
-[git](https://git-scm.com/downloads)
-[python](https://www.python.org/)
-- Make sure "Add Python X to PATH" where "X" is the version number
+- [git](https://git-scm.com/downloads)
+- [python](https://www.python.org/)
+    - Make sure "Add Python X to PATH" where "X" is the version number
 
 ## Clone
 run: 
