@@ -193,20 +193,20 @@
                         <input type="checkbox" name="sites" value="google">
                         Google
                     </label>
+                    <label>
+                        <input type="checkbox" id="remote-only" name="remote-only">
+                        Remote Only
+                    </label>
+
                 </div>
 
-                <label for="num_queries">Number of Queries</label>
+                <label for="num_queries">Number of jobs each</label>
                 <select id="num_queries" name="num_queries">
                     <option value="10">10</option>
                     <option value="20" selected>20</option>
                     <option value="50">50</option>
                     <option value="100">100</option>
                 </select>
-
-                <div class="remote-only">
-                    <input type="checkbox" id="remote-only" name="remote-only">
-                    <label for="remote-only">Remote only</label>
-                </div>
 
                 <button type="submit">SEARCH</button>
             </form>

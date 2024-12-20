@@ -24,7 +24,7 @@ def search():
     num_queries = int(request.form.get("num_queries", 20))  # Default to 20 if not set
     remote_only = request.form.get("remote-only") == "on"  # Check if checkbox is ticked
     if remote_only and search_term:
-        search_term += " remote"
+        search_term += "remote"
 
     # Perform the job scraping
     jobs = scrape_jobs(

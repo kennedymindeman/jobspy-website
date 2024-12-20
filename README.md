@@ -20,3 +20,7 @@ run:
 ### Access Website
 You'll get a list of addresses to connect to after running the last command like "http://127.0.0.1:8080"
 Click on one to access the website
+
+# Connection
+## IP address
+http://3.16.41.34:8080/
