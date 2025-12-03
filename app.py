@@ -1,6 +1,7 @@
-import os
 import csv
-from flask import Flask, request, send_file, render_template
+import os
+
+from flask import Flask, render_template, request, send_file
 from jobspy import scrape_jobs
 
 app = Flask(__name__)
@@ -35,7 +36,7 @@ def search():
         results_wanted=num_queries,
         hours_old=72,  # Adjust as needed
         country_indeed="USA",  # Example, adjust for your needs
-        remote_only=remote_only  # Pass this filter if the job scraper supports it
+        remote_only=remote_only,  # Pass this filter if the job scraper supports it
     )
 
     # Save jobs to a CSV file
@@ -44,10 +45,7 @@ def search():
 
     # Return the CSV file for download
     return send_file(
-        output_file,
-        as_attachment=True,
-        download_name="jobs.csv",
-        mimetype="text/csv"
+        output_file, as_attachment=True, download_name="jobs.csv", mimetype="text/csv"
     )
 
 
