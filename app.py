@@ -16,7 +16,6 @@ def home():
 
 
 @app.route("/search", methods=["POST"])
-@app.route("/search", methods=["POST"])
 def search():
     # Get form data
     search_term = request.form.get("job")
